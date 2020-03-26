@@ -39,10 +39,10 @@
             </objects>
             <point key="canvasLocation" x="-57.971014492753625" y="137.94642857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Next View Controller-->
         <scene sceneID="bLD-4P-bC3">
             <objects>
-                <viewController id="jQM-VJ-Qns" sceneMemberID="viewController">
+                <viewController id="jQM-VJ-Qns" customClass="NextViewController" customModule="Swift5Button" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GuD-8i-YgG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

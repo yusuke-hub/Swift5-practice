@@ -15,6 +15,7 @@
 		11739BBC242C335B00E41768 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11739BBA242C335B00E41768 /* LaunchScreen.storyboard */; };
 		11739BC5242C379400E41768 /* key.png in Resources */ = {isa = PBXBuildFile; fileRef = 11739BC3242C379400E41768 /* key.png */; };
 		11739BC6242C379400E41768 /* setting.png in Resources */ = {isa = PBXBuildFile; fileRef = 11739BC4242C379400E41768 /* setting.png */; };
+		11739BC8242C49C600E41768 /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11739BC7242C49C600E41768 /* NextViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		11739BBD242C335B00E41768 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		11739BC3242C379400E41768 /* key.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = key.png; sourceTree = "<group>"; };
 		11739BC4242C379400E41768 /* setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setting.png; sourceTree = "<group>"; };
+		11739BC7242C49C600E41768 /* NextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				11739BAF242C335600E41768 /* AppDelegate.swift */,
 				11739BB1242C335600E41768 /* SceneDelegate.swift */,
 				11739BB3242C335600E41768 /* ViewController.swift */,
+				11739BC7242C49C600E41768 /* NextViewController.swift */,
 				11739BB5242C335600E41768 /* Main.storyboard */,
 				11739BB8242C335B00E41768 /* Assets.xcassets */,
 				11739BBA242C335B00E41768 /* LaunchScreen.storyboard */,
@@ -147,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				11739BB4242C335600E41768 /* ViewController.swift in Sources */,
+				11739BC8242C49C600E41768 /* NextViewController.swift in Sources */,
 				11739BB0242C335600E41768 /* AppDelegate.swift in Sources */,
 				11739BB2242C335600E41768 /* SceneDelegate.swift in Sources */,
 			);

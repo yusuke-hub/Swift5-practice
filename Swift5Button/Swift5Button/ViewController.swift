@@ -18,4 +18,4 @@ class ViewController: UIViewController {
 
 }
 
-//segue: [動]円滑に移行する [名]切れ目なく続くこと
+// segue: [動]円滑に移行する [名]切れ目なく続くこと
