@@ -9,10 +9,12 @@
 import UIKit
 
 class NextViewController: UIViewController {
-
+    var count = 5
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        count = 10
         // Do any additional setup after loading the view.
     }
     
