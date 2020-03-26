@@ -13,6 +13,8 @@
 		11739BB7242C335600E41768 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11739BB5242C335600E41768 /* Main.storyboard */; };
 		11739BB9242C335B00E41768 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11739BB8242C335B00E41768 /* Assets.xcassets */; };
 		11739BBC242C335B00E41768 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11739BBA242C335B00E41768 /* LaunchScreen.storyboard */; };
+		11739BC5242C379400E41768 /* key.png in Resources */ = {isa = PBXBuildFile; fileRef = 11739BC3242C379400E41768 /* key.png */; };
+		11739BC6242C379400E41768 /* setting.png in Resources */ = {isa = PBXBuildFile; fileRef = 11739BC4242C379400E41768 /* setting.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		11739BB8242C335B00E41768 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11739BBB242C335B00E41768 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		11739BBD242C335B00E41768 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11739BC3242C379400E41768 /* key.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = key.png; sourceTree = "<group>"; };
+		11739BC4242C379400E41768 /* setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setting.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 		11739BAE242C335600E41768 /* Swift5Button */ = {
 			isa = PBXGroup;
 			children = (
+				11739BC3242C379400E41768 /* key.png */,
+				11739BC4242C379400E41768 /* setting.png */,
 				11739BAF242C335600E41768 /* AppDelegate.swift */,
 				11739BB1242C335600E41768 /* SceneDelegate.swift */,
 				11739BB3242C335600E41768 /* ViewController.swift */,
@@ -128,6 +134,8 @@
 				11739BBC242C335B00E41768 /* LaunchScreen.storyboard in Resources */,
 				11739BB9242C335B00E41768 /* Assets.xcassets in Resources */,
 				11739BB7242C335600E41768 /* Main.storyboard in Resources */,
+				11739BC6242C379400E41768 /* setting.png in Resources */,
+				11739BC5242C379400E41768 /* key.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

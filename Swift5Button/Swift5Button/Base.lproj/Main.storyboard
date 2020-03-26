@@ -18,7 +18,10 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z2V-4p-CvX">
                                 <rect key="frame" x="143" y="384" width="128" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="key"/>
+                                <state key="normal" image="setting.png"/>
+                                <connections>
+                                    <segue destination="jQM-VJ-Qns" kind="presentation" modalPresentationStyle="fullScreen" id="CDv-UX-Mjm"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.45138680930000002" green="0.99309605359999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -29,8 +32,31 @@
             </objects>
             <point key="canvasLocation" x="-57" y="138"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="bLD-4P-bC3">
+            <objects>
+                <viewController id="jQM-VJ-Qns" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GuD-8i-YgG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yel-1h-hfD">
+                                <rect key="frame" x="143" y="384" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="key.png"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.79924735627584365" blue="0.99183266751490629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="8np-oW-4oY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iXT-FY-QGS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="729" y="138"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="key" width="128" height="128"/>
+        <image name="key.png" width="128" height="128"/>
+        <image name="setting.png" width="128" height="128"/>
     </resources>
 </document>
