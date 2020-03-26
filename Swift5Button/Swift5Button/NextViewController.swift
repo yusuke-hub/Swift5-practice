@@ -9,17 +9,19 @@
 import UIKit
 
 class NextViewController: UIViewController {
+    @IBOutlet var changeLabel: UILabel!
+    
     var count = 5
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         count = 10
-        // Do any additional setup after loading the view.
+
     }
     
-    @IBAction func tap(_ sender: Any) {
-        
+    @IBAction func change(_ sender: Any) {
+        changeLabel.text = "暗号が解除されました"
     }
     
     /*

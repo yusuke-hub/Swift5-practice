@@ -21,6 +21,7 @@
                                 <state key="normal" image="setting.png"/>
                                 <connections>
                                     <action selector="tap:" destination="FH0-16-JbA" eventType="touchUpInside" id="Wf0-Fe-CLS"/>
+                                    <action selector="tap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zsi-9F-gg3"/>
                                     <segue destination="jQM-VJ-Qns" kind="presentation" modalPresentationStyle="fullScreen" id="CDv-UX-Mjm"/>
                                 </connections>
                             </button>
@@ -53,6 +54,9 @@
                                 <rect key="frame" x="143" y="384" width="128" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="key.png"/>
+                                <connections>
+                                    <action selector="change:" destination="jQM-VJ-Qns" eventType="touchUpInside" id="4YD-gL-BNp"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="次の画面" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fyg-lu-O6r">
                                 <rect key="frame" x="0.0" y="106" width="414" height="38"/>
@@ -65,6 +69,9 @@
                         <color key="backgroundColor" red="1" green="0.57254717394733379" blue="0.56044065032016799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="8np-oW-4oY"/>
                     </view>
+                    <connections>
+                        <outlet property="changeLabel" destination="fyg-lu-O6r" id="N4l-FQ-noN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iXT-FY-QGS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

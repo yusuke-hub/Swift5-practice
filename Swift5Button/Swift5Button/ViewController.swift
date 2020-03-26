@@ -15,7 +15,9 @@ class ViewController: UIViewController {
         
     }
 
-
+    @IBAction func tap(_ sender: Any) {
+    }
+    
 }
 
 // segue: [動]円滑に移行する [名]切れ目なく続くこと
