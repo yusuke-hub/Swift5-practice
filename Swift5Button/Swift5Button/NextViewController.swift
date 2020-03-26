@@ -16,7 +16,10 @@ class NextViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func tap(_ sender: Any) {
+        
+    }
+    
     /*
     // MARK: - Navigation
 
