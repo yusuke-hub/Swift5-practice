@@ -25,6 +25,7 @@ class ViewController: UIViewController {
         if count >= 10 {
             changeTextColor()
         }
+        
     }
     
     @IBAction func minus(_ sender: Any) {
