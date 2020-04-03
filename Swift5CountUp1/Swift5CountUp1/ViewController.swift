@@ -17,6 +17,11 @@ class ViewController: UIViewController {
 
     }
 
-
+    @IBAction func plus(_ sender: Any) {
+        
+    }
+    
+    @IBAction func minus(_ sender: Any) {
+    }
 }
 
