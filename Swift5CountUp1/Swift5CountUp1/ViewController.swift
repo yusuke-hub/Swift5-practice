@@ -22,11 +22,17 @@ class ViewController: UIViewController {
     @IBAction func plus(_ sender: Any) {
         count = count + 1
         countUpLabel.text = String(count)
+        if count >= 10 {
+            changeTextColor()
+        }
     }
     
     @IBAction func minus(_ sender: Any) {
         count = count - 1
         countUpLabel.text = String(count)
+        if count <= 0 {
+            resetColor()
+        }
     }
     
     func changeTextColor(){
