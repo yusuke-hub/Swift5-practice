@@ -20,12 +20,24 @@ class ViewController: UIViewController {
     
     var count = Int()
     
+    var imageArray = [UIImage]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         count = 0
         
-        stopButton.isEnabled = true
+        stopButton.isEnabled = false
+        
+        for i in 0..<5 {
+            
+            print(i)
+            
+            let image = UIImage(named: "\(i)")
+            imageArray.append(image!)
+        }
+        
+        imageView.image = UIImage(named: "0")
         
     }
 //    0.2秒おきに/UIViewControllerクラス自身に対して/timerUpdateと言うセレクターを実行する/繰り返す
@@ -35,19 +47,34 @@ class ViewController: UIViewController {
 //    xcodeは以前obkective-cという言語だった名残でこの書き方になった
     @objc func timerUpdate() {
         count = count + 1
-        imageView.image = UIImage(named: "0")
+        
+        if count > 4 {
+            
+            count = 0
+            
+        }
+        imageView.image = imageArray[count]
     }
 
     @IBAction func start(_ sender: Any) {
-//        スタートボタンを押せなくする
-        startButton.isEnabled = true
+
+        startButton.isEnabled = false
+        
+        stopButton.isEnabled = true
+        
+        startTimer()
     }
     
     @IBAction func stop(_ sender: Any) {
-//        ストップボタンを押せなくする
-        stopButton.isEnabled = true
-//        スタートボタンを押せるようにする
-        startButton.isEnabled = false
+
+        stopButton.isEnabled = false
+        
+        startButton.isEnabled = true
+
+
+        
+        timer.invalidate()
+        
     }
 }
 
