@@ -54,12 +54,12 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="countLabel" destination="YqM-VM-5C9" id="02d-Gq-Lbc"/>
+                        <outlet property="countUpLabel" destination="YqM-VM-5C9" id="APf-zt-Dak"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="105.79710144927537" y="8.7053571428571423"/>
+            <point key="canvasLocation" x="-103" y="19"/>
         </scene>
     </scenes>
     <resources>
