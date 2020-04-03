@@ -7,3 +7,22 @@
 //
 
 import Foundation
+
+class Car{
+    
+    var frontwheel = 0
+    var rearwheel = 0
+    
+    init(){
+         
+        frontwheel = 2
+        rearwheel = 2
+        
+    }
+    
+    func drive(){
+        print("運転開始 !!")
+        print("前輪 \(frontwheel)")
+        print("後輪 \(rearwheel)")
+    }
+}
