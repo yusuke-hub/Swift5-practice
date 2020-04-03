@@ -29,5 +29,12 @@ class ViewController: UIViewController {
         countUpLabel.text = String(count)
     }
     
+    func changeTextColor(){
+        countUpLabel.textColor = .yellow
+    }
+    
+    func resetColor(){
+        countUpLabel.textColor = .white
+    }
 }
 
