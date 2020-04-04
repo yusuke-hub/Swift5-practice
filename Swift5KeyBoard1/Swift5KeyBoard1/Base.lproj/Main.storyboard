@@ -75,6 +75,20 @@
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ユーザーネーム" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kVO-9J-Fsh">
+                                            <rect key="frame" x="47" y="511" width="281" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="パスワード" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Px0-sw-SyK">
+                                            <rect key="frame" x="47" y="553" width="281" height="24"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                 </view>
                                 <blurEffect style="regular"/>
@@ -85,9 +99,9 @@
                     </view>
                     <connections>
                         <outlet property="logoImageView" destination="g3U-Qc-qou" id="mP8-rg-wVL"/>
-                        <outlet property="passwordDisplay" destination="iBp-69-EzV" id="Ifg-Bb-koL"/>
+                        <outlet property="passwordLabel" destination="Px0-sw-SyK" id="0ky-Px-iN5"/>
                         <outlet property="passwordTextField" destination="NGN-rQ-r7G" id="bp9-7p-r3r"/>
-                        <outlet property="userNameDisplay" destination="T3s-jR-Cb9" id="5e1-3t-y2C"/>
+                        <outlet property="userNameLabel" destination="kVO-9J-Fsh" id="GjH-kZ-dnb"/>
                         <outlet property="userNameTextField" destination="k85-mE-Zug" id="WCz-Jn-Cnt"/>
                     </connections>
                 </viewController>

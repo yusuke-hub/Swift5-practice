@@ -13,16 +13,17 @@ class ViewController: UIViewController {
     
     @IBOutlet var userNameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
-    @IBOutlet var userNameDisplay: UITextField!
-    @IBOutlet var passwordDisplay: UITextField!
+
+    @IBOutlet var userNameLabel: UILabel!
+    @IBOutlet var passwordLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
     @IBAction func login(_ sender: Any) {
-        userNameDisplay = userNameTextField.text
-        passwordDisplay = passwordTextField.
+        userNameLabel.text = userNameTextField.text
+        passwordLabel.text = passwordTextField.text
     }
     
 }
