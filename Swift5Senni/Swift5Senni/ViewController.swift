@@ -25,7 +25,14 @@ class ViewController: UIViewController {
         label.text = String(count)
         
         if count == 10{
-            performSegue(withIdentifier: "next", sender: nil)
+            //画面に指定したIDを使用する
+            //performSegue(withIdentifier: "next", sender: nil)
+            
+            //storyboardに指定したIDを使用する
+            let nextVC = storyboard?.instantiateViewController(withIdentifier: "next") as! NextViewController
+            nextVC.count2 = count
+            // UIViewControllerはNavigationControllerを継承している
+            navigationController?.pushViewController(nextVC, animated: true)
         }
     }
     

@@ -15,7 +15,6 @@ class NextViewController: UIViewController {
     var count2 = 0
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(count2)
         label2.text = String(count2)
     }
     
@@ -29,10 +28,5 @@ class NextViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    @IBAction func back(_ sender: Any) {
-        
-        dismiss(animated: true, completion: nil)
-        
-    }
     
 }
