@@ -15,7 +15,7 @@ class NextViewController: UIViewController {
     var count2 = 0
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print(count2)
         label2.text = String(count2)
     }
     

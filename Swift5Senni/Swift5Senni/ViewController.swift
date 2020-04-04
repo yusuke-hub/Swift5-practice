@@ -25,7 +25,6 @@ class ViewController: UIViewController {
         label.text = String(count)
         
         if count == 10{
-            count = 0
             performSegue(withIdentifier: "next", sender: nil)
         }
     }
