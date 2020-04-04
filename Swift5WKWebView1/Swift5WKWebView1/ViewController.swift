@@ -7,9 +7,12 @@
 //
 
 import UIKit
-
+// 元々はUIKitに含まれていた
+import WebKit
 
 class ViewController: UIViewController {
+    
+    var webview = WKWebView()
     // 読み込みが完了するまで、くるくる回る
     @IBOutlet var indicator: UIActivityIndicatorView!
     
