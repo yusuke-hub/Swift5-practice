@@ -12,17 +12,22 @@ import WebKit
 
 class ViewController: UIViewController {
     
-    var webview = WKWebView()
+    var webView = WKWebView()
     // 読み込みが完了するまで、くるくる回る
     @IBOutlet var indicator: UIActivityIndicatorView!
     
+    @IBOutlet var toolBar: UIToolbar!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        webView.frame = CGRect(x: 0, y: toolBar.frame.size.height, width: view.frame.size.width, height: view.frame.size.width - toolBar.frame.size.height*2)
+        view.addSubview(webView)
     }
 
-    @IBOutlet var go: UIToolbar!
+    @IBAction func go(_ sender: Any) {
+    }
     
-    @IBOutlet var back: UIToolbar!
+    @IBAction func back(_ sender: Any) {
+    }
 }
 

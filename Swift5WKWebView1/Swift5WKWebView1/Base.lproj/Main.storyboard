@@ -19,7 +19,11 @@
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem title="←" id="ZTF-Gm-9ZM"/>
+                                    <barButtonItem title="←" id="ZTF-Gm-9ZM">
+                                        <connections>
+                                            <action selector="back:" destination="BYZ-38-t0r" id="iDI-BZ-pQH"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="9hs-jy-0UG"/>
                                     <barButtonItem style="plain" id="rPp-kV-55o">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="VIM-s0-LK0">
@@ -27,6 +31,9 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="→"/>
                                         </button>
+                                        <connections>
+                                            <action selector="go:" destination="BYZ-38-t0r" id="o0h-AY-hX6"/>
+                                        </connections>
                                     </barButtonItem>
                                     <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="KPk-Oq-eF1"/>
                                 </items>
@@ -36,7 +43,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
                             <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hlY-zt-me9">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
@@ -49,9 +56,8 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="back" destination="R52-GJ-g71" id="yYQ-wg-zYN"/>
-                        <outlet property="go" destination="R52-GJ-g71" id="na1-Bc-kSb"/>
                         <outlet property="indicator" destination="l61-6X-oUH" id="T0L-bG-UXL"/>
+                        <outlet property="toolBar" destination="R52-GJ-g71" id="lfg-fO-IgL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
