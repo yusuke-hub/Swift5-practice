@@ -29,7 +29,7 @@ class ViewController: UIViewController {
             //performSegue(withIdentifier: "next", sender: nil)
             
             //storyboardに指定したIDを使用する
-            let nextVC = storyboard?.instantiateViewController(withIdentifier: "next") as! NextViewController
+            let nextVC = storyboard?.instantiateViewController(withIdentifier: "nexSwiftt") as! NextViewController
             nextVC.count2 = count
             // UIViewControllerはNavigationControllerを継承している
             navigationController?.pushViewController(nextVC, animated: true)
