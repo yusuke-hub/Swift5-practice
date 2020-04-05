@@ -7,6 +7,12 @@
 //
 
 import UIKit
+protocol CatchProtocol {
+    
+    func catchData(count:Int)
+    
+}
+
 
 class NextViewController: UIViewController {
     
@@ -14,6 +20,8 @@ class NextViewController: UIViewController {
     @IBOutlet var label: UILabel!
     
     var count:Int = 0
+    
+    var delegate:CatchProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +34,11 @@ class NextViewController: UIViewController {
         label.text = String(count)
     }
     
+    @IBAction func back(_ sender: Any) {
+        
+        delegate?.catchData(count: count)
+        dismiss(animated: true, completion: nil)
+    }
     /*
     // MARK: - Navigation
 
