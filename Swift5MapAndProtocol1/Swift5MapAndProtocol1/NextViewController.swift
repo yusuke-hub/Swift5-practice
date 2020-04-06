@@ -28,11 +28,11 @@ class NextViewController: UIViewController {
         let latValue = latTextField.text!
         let logValue = logTextField.text!
         
-        // デリゲートメソッドの引数に入れる
-        delegate?.searchLocation(latValue: latValue, logValue: logValue)
 
         // 両方のTFが空でなければ戻る
         if latTextField.text != nil || logTextField.text != nil{
+            // デリゲートメソッドの引数に入れる
+            delegate?.searchLocation(latValue: latValue, logValue: logValue)
             dismiss(animated: true, completion: nil)
         }
     }
