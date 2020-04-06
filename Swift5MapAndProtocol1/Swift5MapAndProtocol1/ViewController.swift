@@ -30,10 +30,31 @@ class ViewController: UIViewController,CLLocationManagerDelegate,UIGestureRecogn
         // ここでのsenderはlongPressTap
         if sender.state == .began{
             
+            let tapPoint = sender.location(in: view)
+            
+            
         }else if sender.state == .ended{
             
         }
     }
     
-}
+    func convert(lat:CLLocationDegrees,log:CLLocationDegrees){
+        let geocoder = CLGeocoder()
+        let location = CLLocation(latitude: lat, longitude: log)
+        // クロージャー / placeMarkに住所が入る / administrativeArea:都道府県名 / locality:市区町村名
+        geocoder.reverseGeocodeLocation(location) { (placeMark, error) in
+            if let placeMark = placeMark{
+                if let pm = placeMark.first{
+                    if pm.administrativeArea != nil || pm.locality != nil {
+                        self.addressString = pm.name! + pm.administrativeArea! + pm.locality!
+                    }else{
+                        self.addressString = pm.name!
+                    }
+                    self.addressLabel.text = self.addressString
+                }
+            }
+        }
+    
+    }
 
+}
