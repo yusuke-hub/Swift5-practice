@@ -35,6 +35,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <state key="normal" title="設定"/>
+                                <connections>
+                                    <action selector="goToSearchVC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VTB-gQ-97B"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -42,7 +45,7 @@
                     </view>
                     <connections>
                         <outlet property="addressLabel" destination="eBc-J1-Q3D" id="dfV-5Q-Yg8"/>
-                        <outlet property="longPress" destination="UT3-QY-jmy" id="vTv-7O-r62"/>
+                        <outlet property="longPress" destination="UT3-QY-jmy" id="jpq-kv-GDl"/>
                         <outlet property="mapView" destination="WGT-mD-1dE" id="YCa-lt-Nqf"/>
                         <outlet property="settingButton" destination="XbS-SM-D3Y" id="MWc-fa-r2I"/>
                         <segue destination="cnP-eq-8fP" kind="presentation" modalPresentationStyle="fullScreen" id="AoY-3y-Nu7"/>
@@ -95,11 +98,18 @@
                                 <state key="normal" title="OK">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="okAction:" destination="cnP-eq-8fP" eventType="touchUpInside" id="M6V-HP-ej4"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="tvr-ap-2Ja"/>
                     </view>
+                    <connections>
+                        <outlet property="latTextField" destination="883-UJ-gmg" id="Qoo-GC-SB4"/>
+                        <outlet property="logTextField" destination="ATu-30-skq" id="ye6-NS-QPn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FvI-Sx-CAI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

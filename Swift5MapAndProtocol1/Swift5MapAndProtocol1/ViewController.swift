@@ -27,14 +27,21 @@ class ViewController: UIViewController,CLLocationManagerDelegate,UIGestureRecogn
     }
 
     @IBAction func longPressTap(_ sender: UILongPressGestureRecognizer) {
-        // ここでのsenderはlongPressTap
+        // ここでのsenderはlongPressTap / タップを開始した時の処理
         if sender.state == .began{
-            
-            let tapPoint = sender.location(in: view)
             
             
         }else if sender.state == .ended{
+            // タップを終了した時の処理
+            // タップした位置を指定して、MKMapView上の緯度、経度を取得する
+            // 緯度経度から住所に変換する
+            let tapPoint = sender.location(in: view)
             
+            // タップした位置(CGPoint)を指定してMKMapView上の緯度,経度を取得する
+            let center = mapView.convert(tapPoint, toCoordinateFrom: mapView)
+            let lat = center.latitude
+            let log = center.longitude
+            convert(lat: lat, log: log)
         }
     }
     
@@ -57,4 +64,16 @@ class ViewController: UIViewController,CLLocationManagerDelegate,UIGestureRecogn
     
     }
 
+    @IBAction func goToSearchVC(_ sender: Any) {
+        
+        // 画面遷移
+        performSegue(withIdentifier: "next", sender: nil?){
+
+        }
+        prepare(for: UIStoryboardSegue, sender: Any?){
+            if segue.identifier == "next"{
+                let nextVC = segue.destination as! NextViewController
+            }
+        }
+    }
 }
