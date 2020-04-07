@@ -1,11 +1,3 @@
-//
-//  ViewController.swift
-//  Swift5MapAndProtocol1
-//
-//  Created by 川端雄介 on 2020/04/06.
-//  Copyright © 2020 Yusuke Kawabata. All rights reserved.
-//
-
 import UIKit
 import MapKit
 import CoreLocation
@@ -66,35 +58,35 @@ class ViewController: UIViewController,CLLocationManagerDelegate,UIGestureRecogn
     @IBAction func goToSearchVC(_ sender: Any) {
         
         // 画面遷移
-        performSegue(withIdentifier: "next", sender: nil?){
+        performSegue(withIdentifier: "next", sender: nil)
 
         }
-        override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
             if segue.identifier == "next"{
                 let nextVC = segue.destination as! NextViewController
             }
         }
-        func searchLocation(latValue: String, logValue: String) {
-            if latValue.isEmpty != true && logValue.isEmpty != true {
+    func searchLocation(latValue: String, logValue: String) {
+        if latValue.isEmpty != true && logValue.isEmpty != true {
                 
-                let latString = latValue
-                let logString = logValue
-                // 緯度,経度からコーディネート
-                let coordinate = CLLocationCoordinate2DMake(Double(latString)!, Double(logString)!)
-                // 表示する範囲を指定する
-                let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
-                // 領域を指定する
-                let region = MKCoordinateRegion(center:coordinate, span:span)
-                // 領域をmapViewに設定
-                mapView.setRegion(region, animated: true)
-                // 緯度経度から住所へ変換
-                convert(lat: Double(latString)!, log: Double(logString)!)
-                // ラベルに表示
-                addressLabel.text = addressString
-            }else{
-                addressLabel.text = "表示できません"
-            }
+            let latString = latValue
+            let logString = logValue
+            // 緯度,経度からコーディネート
+            let coordinate = CLLocationCoordinate2DMake(Double(latString)!, Double(logString)!)
+            // 表示する範囲を指定する
+            let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
+            // 領域を指定する
+            let region = MKCoordinateRegion(center:coordinate, span:span)
+            // 領域をmapViewに設定
+            mapView.setRegion(region, animated: true)
+            // 緯度経度から住所へ変換
+            convert(lat: Double(latString)!, log: Double(logString)!)
+            // ラベルに表示
+            addressLabel.text = addressString
+        }else{
+            addressLabel.text = "表示できません"
         }
-
     }
+
 }
+

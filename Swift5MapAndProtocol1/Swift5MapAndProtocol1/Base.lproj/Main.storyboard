@@ -48,7 +48,7 @@
                         <outlet property="longPress" destination="UT3-QY-jmy" id="jpq-kv-GDl"/>
                         <outlet property="mapView" destination="WGT-mD-1dE" id="YCa-lt-Nqf"/>
                         <outlet property="settingButton" destination="XbS-SM-D3Y" id="MWc-fa-r2I"/>
-                        <segue destination="cnP-eq-8fP" kind="presentation" modalPresentationStyle="fullScreen" id="AoY-3y-Nu7"/>
+                        <segue destination="cnP-eq-8fP" kind="presentation" identifier="next" modalPresentationStyle="fullScreen" id="AoY-3y-Nu7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
