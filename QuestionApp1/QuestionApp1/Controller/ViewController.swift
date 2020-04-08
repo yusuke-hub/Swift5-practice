@@ -14,7 +14,12 @@ class ViewController: UIViewController {
     
     @IBOutlet var maxScoreLabel: UILabel!
     
-    let images = ImagesList()
+    var correctCount = 0
+    var wrongCount = 0
+    var maxScore = 0
+    var questionNumber = 0
+    
+    let imagesList = ImagesList()
     
     // IBActionで検知した正答がどちらなのかを取得する変数
     var pickedAnswer = false
@@ -23,6 +28,16 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        correctCount = 0
+        wrongCount = 0
+        questionNumber = 0
+        
+        imageView.image = UIImage(named: imagesList.list[0].imageText)
+    }
 
     @IBAction func answer(_ sender: Any) {
         
@@ -30,7 +45,7 @@ class ViewController: UIViewController {
             
             pickedAnswer = true
             // 丸ボタンが押された時
-            
+
             // ユーザーが押したボタンが丸ボタンだった
             // 丸ボタンの音声を流す
             
@@ -41,6 +56,27 @@ class ViewController: UIViewController {
             // ×ボタンの音声をながす
         }
         // 回答があっているか(pickedAnswerとImagesListのcorrectOrNotの値が一致しているかどうか）
+        func check(){
+            let correctAnswer = imagesList.list[0].answer
+            if correctAnswer == pickedAnswer{
+                print("正解")
+                correctCount = correctCount + 1
+            }else{
+                print("間違い")
+                wrongCount = wrongCount + 1
+            }
+            
+        }
+        func nextQuestions(){
+            if questionNumber <= 9{
+                questionNumber = questionNumber + 1
+                imageView.image = UIImage(named: imagesList.list[questionNumber].imageText)
+            }else{
+                print("問題終了")
+                performSegue(withIdentifier: "next", sender: nil)
+            }
+        }
+        prepareForInterfaceBuilder()
     }
     
 }
