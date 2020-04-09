@@ -49,12 +49,13 @@ class ViewController: UIViewController {
             // ユーザーが押したボタンが丸ボタンだった
             // 丸ボタンの音声を流す
             
-        }else if ( sender as AnyObject).tag == 2{
+        }else if (sender as AnyObject).tag == 2{
             pickedAnswer = false
             // ×ボタンが押された時
             // ユーザーが押したボタンが×ボタンだった
             // ×ボタンの音声をながす
         }
+    }
         // 回答があっているか(pickedAnswerとImagesListのcorrectOrNotの値が一致しているかどうか）
         func check(){
             let correctAnswer = imagesList.list[0].answer
@@ -76,8 +77,14 @@ class ViewController: UIViewController {
                 performSegue(withIdentifier: "next", sender: nil)
             }
         }
-        prepareForInterfaceBuilder()
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+            if segue.identifier == "next"{
+                let nextVC = segue.destination as! NextViewController
+                nextVC.correctCount = correctCount
+                nextVC.wrongCount = wrongCount
+            }
+        }
     }
     
-}
+
 

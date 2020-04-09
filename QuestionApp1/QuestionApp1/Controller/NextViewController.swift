@@ -7,16 +7,35 @@
 //
 
 import UIKit
+protocol NowScoreDelegate {
+    func nowScore(score: Int)
+}
 
 class NextViewController: UIViewController {
 
+    @IBOutlet var correctLabel: UILabel!
+    @IBOutlet var wrongLabel: UILabel!
+    
+    var correctCount = Int()
+    var wrongCount = Int()
+    var beforeCount = Int()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        correctLabel.text = String(correctCount)
+        wrongLabel.text = String(wrongCount)
         // Do any additional setup after loading the view.
     }
-    
 
+    
+    @IBAction func back(_ sender: Any) {
+        if beforeCount < correctCount{
+            UserDefaults.standard.set(correctCount, forKey: beforeCount)
+            delegate?.mowScore(score: correctCount)
+        }
+        dismiss(animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 
