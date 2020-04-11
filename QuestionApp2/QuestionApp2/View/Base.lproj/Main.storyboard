@@ -100,6 +100,9 @@
                                 <rect key="frame" x="143" y="421" width="128" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="home"/>
+                                <connections>
+                                    <action selector="back:" destination="bZ1-ub-QM4" eventType="touchUpInside" id="Ovd-PC-Qu2"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dnZ-c8-NZp">
                                 <rect key="frame" x="241" y="178" width="131" height="21"/>
