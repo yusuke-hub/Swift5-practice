@@ -20,6 +20,10 @@
 		1127429F2441A74600ED939B /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1127429E2441A74600ED939B /* Animal.swift */; };
 		112742A12441A77600ED939B /* Human.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112742A02441A77600ED939B /* Human.swift */; };
 		112742A52441AC2600ED939B /* WithOutMP3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112742A42441AC2600ED939B /* WithOutMP3.swift */; };
+		112742A72441CDA200ED939B /* maruSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 112742A62441CDA200ED939B /* maruSound.mp3 */; };
+		112742A92441CDAB00ED939B /* batsuSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 112742A82441CDAB00ED939B /* batsuSound.mp3 */; };
+		112742AB2441CEA700ED939B /* ChangeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112742AA2441CEA700ED939B /* ChangeColor.swift */; };
+		112742AD2441D2E200ED939B /* sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 112742AC2441D2E200ED939B /* sound.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +42,10 @@
 		1127429E2441A74600ED939B /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
 		112742A02441A77600ED939B /* Human.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Human.swift; sourceTree = "<group>"; };
 		112742A42441AC2600ED939B /* WithOutMP3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithOutMP3.swift; sourceTree = "<group>"; };
+		112742A62441CDA200ED939B /* maruSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = maruSound.mp3; sourceTree = "<group>"; };
+		112742A82441CDAB00ED939B /* batsuSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = batsuSound.mp3; sourceTree = "<group>"; };
+		112742AA2441CEA700ED939B /* ChangeColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeColor.swift; sourceTree = "<group>"; };
+		112742AC2441D2E200ED939B /* sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +82,9 @@
 				1127428C24414ACB00ED939B /* View */,
 				1127428D24414AD200ED939B /* Controller */,
 				11274282244148E300ED939B /* LaunchScreen.storyboard */,
+				112742AC2441D2E200ED939B /* sound.mp3 */,
+				112742A62441CDA200ED939B /* maruSound.mp3 */,
+				112742A82441CDAB00ED939B /* batsuSound.mp3 */,
 				11274285244148E300ED939B /* Info.plist */,
 			);
 			path = QuestionApp2;
@@ -88,6 +99,7 @@
 				1127429E2441A74600ED939B /* Animal.swift */,
 				112742A02441A77600ED939B /* Human.swift */,
 				112742A42441AC2600ED939B /* WithOutMP3.swift */,
+				112742AA2441CEA700ED939B /* ChangeColor.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -171,7 +183,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				11274284244148E300ED939B /* LaunchScreen.storyboard in Resources */,
+				112742A72441CDA200ED939B /* maruSound.mp3 in Resources */,
 				11274281244148E300ED939B /* Assets.xcassets in Resources */,
+				112742A92441CDAB00ED939B /* batsuSound.mp3 in Resources */,
+				112742AD2441D2E200ED939B /* sound.mp3 in Resources */,
 				1127427F244148E200ED939B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -184,6 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1127427C244148E200ED939B /* ViewController.swift in Sources */,
+				112742AB2441CEA700ED939B /* ChangeColor.swift in Sources */,
 				1127429F2441A74600ED939B /* Animal.swift in Sources */,
 				1127429D2441A4F300ED939B /* SoundFile.swift in Sources */,
 				1127428F24414BD700ED939B /* NextViewController.swift in Sources */,
