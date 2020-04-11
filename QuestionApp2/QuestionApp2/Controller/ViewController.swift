@@ -8,6 +8,7 @@
 
 import UIKit
 
+// ViewControllerはUIViewControllerクラスを継承したもの
 class ViewController: UIViewController,NowScoreDelegate {
 
     @IBOutlet var imageView: UIImageView!
@@ -24,6 +25,9 @@ class ViewController: UIViewController,NowScoreDelegate {
     var pickedAnswer = false
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let human = Human()
+        human.breath()
         // Do any additional setup after loading the view.
     }
     
