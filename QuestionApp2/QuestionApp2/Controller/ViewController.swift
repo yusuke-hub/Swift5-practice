@@ -23,11 +23,11 @@ class ViewController: UIViewController,NowScoreDelegate {
     
     // IBActionで検知した正答がどちらなのかを取得する変数
     var pickedAnswer = false
+    
+    var withOutMP3 = WithOutMP3()
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let human = Human()
-        human.breath()
         // Do any additional setup after loading the view.
     }
     
@@ -49,16 +49,16 @@ class ViewController: UIViewController,NowScoreDelegate {
     @IBAction func answer(_ sender: Any) {
         
         if (sender as AnyObject).tag == 1{
-            pickedAnswer == true
+            pickedAnswer = true
             
-
+            withOutMP3.playSound(fileName: "maruSound", extensionName: "mp3")
             // ◯ボタンが押された時
             
             // ユーザーが押したボタンが○ボタンだった
             
             // ○ボタンの音声を流す
         }else if (sender as AnyObject).tag == 2{
-            pickedAnswer == false
+            pickedAnswer = false
             // ×ボタンが押された時
             
             // ユーザーが押したボタンが×だった
@@ -72,7 +72,7 @@ class ViewController: UIViewController,NowScoreDelegate {
     }
     
     func check(){
-        let correctAnswer = imagesList.list[0].answer
+        let correctAnswer = imagesList.list[questionNumber].answer
         if correctAnswer == pickedAnswer{
             
             print("正解")

@@ -19,6 +19,7 @@
 		1127429D2441A4F300ED939B /* SoundFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1127429C2441A4F300ED939B /* SoundFile.swift */; };
 		1127429F2441A74600ED939B /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1127429E2441A74600ED939B /* Animal.swift */; };
 		112742A12441A77600ED939B /* Human.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112742A02441A77600ED939B /* Human.swift */; };
+		112742A52441AC2600ED939B /* WithOutMP3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112742A42441AC2600ED939B /* WithOutMP3.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		1127429C2441A4F300ED939B /* SoundFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundFile.swift; sourceTree = "<group>"; };
 		1127429E2441A74600ED939B /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
 		112742A02441A77600ED939B /* Human.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Human.swift; sourceTree = "<group>"; };
+		112742A42441AC2600ED939B /* WithOutMP3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithOutMP3.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				1127429C2441A4F300ED939B /* SoundFile.swift */,
 				1127429E2441A74600ED939B /* Animal.swift */,
 				112742A02441A77600ED939B /* Human.swift */,
+				112742A42441AC2600ED939B /* WithOutMP3.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 				112742A12441A77600ED939B /* Human.swift in Sources */,
 				11274278244148E200ED939B /* AppDelegate.swift in Sources */,
 				1127427A244148E200ED939B /* SceneDelegate.swift in Sources */,
+				112742A52441AC2600ED939B /* WithOutMP3.swift in Sources */,
 				1127429524415A5F00ED939B /* imagesModel.swift in Sources */,
 				1127429724415A7400ED939B /* imagesList.swift in Sources */,
 			);
