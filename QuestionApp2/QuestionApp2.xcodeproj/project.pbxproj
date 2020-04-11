@@ -14,6 +14,8 @@
 		11274281244148E300ED939B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11274280244148E300ED939B /* Assets.xcassets */; };
 		11274284244148E300ED939B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11274282244148E300ED939B /* LaunchScreen.storyboard */; };
 		1127428F24414BD700ED939B /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1127428E24414BD700ED939B /* NextViewController.swift */; };
+		1127429524415A5F00ED939B /* imagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1127429424415A5F00ED939B /* imagesModel.swift */; };
+		1127429724415A7400ED939B /* imagesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1127429624415A7400ED939B /* imagesList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		11274283244148E300ED939B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		11274285244148E300ED939B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1127428E24414BD700ED939B /* NextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
+		1127429424415A5F00ED939B /* imagesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imagesModel.swift; sourceTree = "<group>"; };
+		1127429624415A7400ED939B /* imagesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imagesList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +74,8 @@
 		1127428B24414AC400ED939B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1127429424415A5F00ED939B /* imagesModel.swift */,
+				1127429624415A7400ED939B /* imagesList.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -169,6 +175,8 @@
 				1127428F24414BD700ED939B /* NextViewController.swift in Sources */,
 				11274278244148E200ED939B /* AppDelegate.swift in Sources */,
 				1127427A244148E200ED939B /* SceneDelegate.swift in Sources */,
+				1127429524415A5F00ED939B /* imagesModel.swift in Sources */,
+				1127429724415A7400ED939B /* imagesList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
