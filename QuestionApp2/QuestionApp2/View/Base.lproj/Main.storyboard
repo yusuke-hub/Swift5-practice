@@ -112,6 +112,10 @@
                         <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="VqU-a9-e72"/>
                     </view>
+                    <connections>
+                        <outlet property="correctLabel" destination="yg8-yp-qM1" id="BXB-7p-tzI"/>
+                        <outlet property="wrongLabel" destination="dnZ-c8-NZp" id="oh8-87-ANv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yrq-n9-DD0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
