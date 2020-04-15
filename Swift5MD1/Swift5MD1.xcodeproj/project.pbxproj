@@ -62,10 +62,10 @@
 				11C159B124470D9600A33C9B /* SceneDelegate.swift */,
 				11C159B324470D9600A33C9B /* ViewController.swift */,
 				11C159B524470D9600A33C9B /* Main.storyboard */,
+				11C159C324470EA000A33C9B /* iPhone11.storyboard */,
 				11C159B824470D9B00A33C9B /* Assets.xcassets */,
 				11C159BA24470D9B00A33C9B /* LaunchScreen.storyboard */,
 				11C159BD24470D9B00A33C9B /* Info.plist */,
-				11C159C324470EA000A33C9B /* iPhone11.storyboard */,
 			);
 			path = Swift5MD1;
 			sourceTree = "<group>";
