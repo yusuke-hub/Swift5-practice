@@ -30,6 +30,8 @@ class ViewController: UIViewController,CLLocationManagerDelegate,UIGestureRecogn
             
             // タップした位置(CGPoint)を指定してMKMapView上の緯度,経度を取得する
             let center = mapView.convert(tapPoint, toCoordinateFrom: mapView)
+            print("ここがタップポイント")
+            print(tapPoint)
             let lat = center.latitude
             let log = center.longitude
             convert(lat: lat, log: log)

@@ -36,7 +36,7 @@ class NextViewController: UIViewController {
     
     @IBAction func back(_ sender: Any) {
         
-        delegate?.catchData(count: count)
+        delegate?.catchData(count: count)ddddddddddddddddddfff
         dismiss(animated: true, completion: nil)
     }
     /*

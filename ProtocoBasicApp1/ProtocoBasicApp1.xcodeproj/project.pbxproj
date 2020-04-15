@@ -61,11 +61,11 @@
 				1183003B2439C03600C39FA9 /* AppDelegate.swift */,
 				1183003D2439C03600C39FA9 /* SceneDelegate.swift */,
 				1183003F2439C03600C39FA9 /* ViewController.swift */,
+				1183004F2439C0F900C39FA9 /* NextViewController.swift */,
 				118300412439C03600C39FA9 /* Main.storyboard */,
 				118300442439C03B00C39FA9 /* Assets.xcassets */,
 				118300462439C03B00C39FA9 /* LaunchScreen.storyboard */,
 				118300492439C03B00C39FA9 /* Info.plist */,
-				1183004F2439C0F900C39FA9 /* NextViewController.swift */,
 			);
 			path = ProtocoBasicApp1;
 			sourceTree = "<group>";
