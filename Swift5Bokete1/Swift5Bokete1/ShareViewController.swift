@@ -31,7 +31,11 @@ class ShareViewController: UIViewController {
         
         // スクリーンショットを撮る
         takeScreenShot()
+        
+        let items = [screenShotImage] as [Any]
         // アクティビティ・ビューに乗っけて、シェアする
+        let activityVC = UIActivityViewController(activityItems: items, applicationActivities: nil)
+        present(activityVC, animated: true, completion: nil)
         
     }
     
@@ -46,7 +50,12 @@ class ShareViewController: UIViewController {
         // viewに書き出す
         self.view.drawHierarchy(in: view.bounds, afterScreenUpdates: true)
         screenShotImage = UIGraphicsGetImageFromCurrentImageContext()!
-        UIGraphicsEndImageContext()
+            UIGraphicsEndImageContext()
+    }
+    
+    @IBAction func back(_ sender: Any) {
+        
+        dismiss(animated: true, completion: nil)
     }
     
     /*
