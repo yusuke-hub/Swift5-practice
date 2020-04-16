@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		111E51E82447F4BA0079BCC3 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111E51E72447F4BA0079BCC3 /* ShareViewController.swift */; };
 		11C159D2244718FB00A33C9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C159D1244718FB00A33C9B /* AppDelegate.swift */; };
 		11C159D4244718FB00A33C9B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C159D3244718FB00A33C9B /* SceneDelegate.swift */; };
 		11C159D6244718FB00A33C9B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C159D5244718FB00A33C9B /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		041C14A2BA5C9C330D447045 /* Pods-Swift5Bokete1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift5Bokete1.release.xcconfig"; path = "Target Support Files/Pods-Swift5Bokete1/Pods-Swift5Bokete1.release.xcconfig"; sourceTree = "<group>"; };
+		111E51E72447F4BA0079BCC3 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		11C159CE244718FB00A33C9B /* Swift5Bokete1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swift5Bokete1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11C159D1244718FB00A33C9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11C159D3244718FB00A33C9B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				11C159D1244718FB00A33C9B /* AppDelegate.swift */,
 				11C159D3244718FB00A33C9B /* SceneDelegate.swift */,
 				11C159D5244718FB00A33C9B /* ViewController.swift */,
+				111E51E72447F4BA0079BCC3 /* ShareViewController.swift */,
 				11C159D7244718FB00A33C9B /* Main.storyboard */,
 				11C159DA244718FF00A33C9B /* Assets.xcassets */,
 				11C159DC244718FF00A33C9B /* LaunchScreen.storyboard */,
@@ -80,7 +83,6 @@
 				E0A1A3606FB0206BF55D6DEE /* Pods-Swift5Bokete1.debug.xcconfig */,
 				041C14A2BA5C9C330D447045 /* Pods-Swift5Bokete1.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -209,6 +211,7 @@
 			files = (
 				11C159D6244718FB00A33C9B /* ViewController.swift in Sources */,
 				11C159D2244718FB00A33C9B /* AppDelegate.swift in Sources */,
+				111E51E82447F4BA0079BCC3 /* ShareViewController.swift in Sources */,
 				11C159D4244718FB00A33C9B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
