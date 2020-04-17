@@ -62,13 +62,30 @@ class ViewController: UIViewController,LoginButtonDelegate {
             self.displayName = result!.user.displayName!
             // photoURLでとれたURL型の値をString型に強制変換する
             self.pictureURLString = result!.user.photoURL!.absoluteString
+            self.pictureURLString = self.pictureURLString + "?type=large"
             UserDefaults.standard.set(1, forKey: "loginOK")
             UserDefaults.standard.set(self.displayName, forKey: "displayName")
             UserDefaults.standard.set(self.pictureURLString, forKey: "pictureURLString")
+            
+            let nextVC = self.storyboard?.instantiateViewController(identifier: "next") as! NextViewController
+            self.navigationController?.pushViewController(nextVC, animated: true)
 
         }
+        
     }
+    
+    // 特に意味はないが、必要な記述
+    func loginButtonWillLogin(_ loginButton: FBLoginButton) -> Bool {
+        
+        return true
+        
+    }
+    
+    
+    
     func loginButtonDidLogOut(_ loginButton: FBLoginButton) {
+        
+        print("ログアウトしました")
         
     }
 

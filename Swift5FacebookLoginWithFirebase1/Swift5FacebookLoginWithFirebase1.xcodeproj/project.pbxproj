@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,7 @@
 		111E51FF24482D740079BCC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 111E51FE24482D740079BCC3 /* Assets.xcassets */; };
 		111E520224482D740079BCC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 111E520024482D740079BCC3 /* LaunchScreen.storyboard */; };
 		111E520A244831DA0079BCC3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 111E5209244831DA0079BCC3 /* GoogleService-Info.plist */; };
+		111E522C24485A350079BCC3 /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111E522B24485A350079BCC3 /* NextViewController.swift */; };
 		C0EEC9CC19D0C3B6A3805649 /* Pods_Swift5FacebookLoginWithFirebase1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 963D993292B8665BCFBE25E4 /* Pods_Swift5FacebookLoginWithFirebase1.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,9 @@
 		111E520124482D740079BCC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		111E520324482D740079BCC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		111E5209244831DA0079BCC3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		111E522B24485A350079BCC3 /* NextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
+		11527A6824493B90008EA4AA /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		11527A6924493B91008EA4AA /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		336EFC07D9F61209F84F7A7A /* Pods-Swift5FacebookLoginWithFirebase1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift5FacebookLoginWithFirebase1.release.xcconfig"; path = "Target Support Files/Pods-Swift5FacebookLoginWithFirebase1/Pods-Swift5FacebookLoginWithFirebase1.release.xcconfig"; sourceTree = "<group>"; };
 		6200A13689094A6E68DE4BD0 /* Pods-Swift5FacebookLoginWithFirebase1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift5FacebookLoginWithFirebase1.debug.xcconfig"; path = "Target Support Files/Pods-Swift5FacebookLoginWithFirebase1/Pods-Swift5FacebookLoginWithFirebase1.debug.xcconfig"; sourceTree = "<group>"; };
 		963D993292B8665BCFBE25E4 /* Pods_Swift5FacebookLoginWithFirebase1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift5FacebookLoginWithFirebase1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,6 +72,7 @@
 				111E51F524482D6F0079BCC3 /* AppDelegate.swift */,
 				111E51F724482D6F0079BCC3 /* SceneDelegate.swift */,
 				111E51F924482D6F0079BCC3 /* ViewController.swift */,
+				111E522B24485A350079BCC3 /* NextViewController.swift */,
 				111E51FB24482D6F0079BCC3 /* Main.storyboard */,
 				111E51FE24482D740079BCC3 /* Assets.xcassets */,
 				111E520024482D740079BCC3 /* LaunchScreen.storyboard */,
@@ -83,7 +88,6 @@
 				6200A13689094A6E68DE4BD0 /* Pods-Swift5FacebookLoginWithFirebase1.debug.xcconfig */,
 				336EFC07D9F61209F84F7A7A /* Pods-Swift5FacebookLoginWithFirebase1.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -139,6 +143,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ja,
 			);
 			mainGroup = 111E51E924482D6F0079BCC3;
 			productRefGroup = 111E51F324482D6F0079BCC3 /* Products */;
@@ -212,6 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				111E51FA24482D6F0079BCC3 /* ViewController.swift in Sources */,
+				111E522C24485A350079BCC3 /* NextViewController.swift in Sources */,
 				111E51F624482D6F0079BCC3 /* AppDelegate.swift in Sources */,
 				111E51F824482D6F0079BCC3 /* SceneDelegate.swift in Sources */,
 			);
@@ -224,6 +230,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				111E51FC24482D6F0079BCC3 /* Base */,
+				11527A6824493B90008EA4AA /* ja */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -232,6 +239,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				111E520124482D740079BCC3 /* Base */,
+				11527A6924493B91008EA4AA /* ja */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -243,6 +251,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -303,6 +312,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
