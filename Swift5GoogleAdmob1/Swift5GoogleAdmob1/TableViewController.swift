@@ -26,11 +26,7 @@ class TableViewController: UITableViewController,GADBannerViewDelegate,GADInters
         backImageView.image = image
         tableView.backgroundView = backImageView
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        interstitial = createAndLoadInterstitial()
     }
 
     // MARK: - Table view data source
@@ -59,8 +55,8 @@ class TableViewController: UITableViewController,GADBannerViewDelegate,GADInters
             // インタースティシャル広告だけならば
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "BannerCell", for: indexPath)
-            let bannerView = cell.viewWithTag(1) as! GADBannerView
-            bannerView.adUnitID = "ca-app-pub-3940256099942544~1458002511"
+            let bannerView = cell.viewWithTag(1)  as! GADBannerView
+            bannerView.adUnitID = "ca-app-pub-8994237886741626/8780864496"
             bannerView.rootViewController = self
             bannerView.load(GADRequest())
             
@@ -85,59 +81,32 @@ class TableViewController: UITableViewController,GADBannerViewDelegate,GADInters
             return cell2
         }
     }
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+    // セルがタップされた時に呼ばれる処理
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
-        // Configure the cell...
-
-        return cell
+        if indexPath.row == 5{
+            if interstitial.isReady{
+                
+                interstitial.present(fromRootViewController: self)
+            }else{
+                
+                print("まだ広告の準備ができません")
+            }
+            
+        }
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    
+    func createAndLoadInterstitial() -> GADInterstitial{
+        
+        let interstitial = GADInterstitial(adUnitID: "ca-app-pub-8994237886741626/1201509952")
+        interstitial.delegate = self
+        interstitial.load(GADRequest())
+        
+        return interstitial
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+    // ×ボタンを押して、インタースティシャル広告を閉じた時、別の広告を準備する
+    func interstitialDidDismissScreen(_ ad: GADInterstitial) {
+        
+        interstitial = createAndLoadInterstitial()
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
