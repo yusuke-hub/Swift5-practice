@@ -1,5 +1,5 @@
 //
-//  AppDelegate.swift
+//  AppDelegate.swift　← アプリ全体のライフタイムイベントを管理する為のクラス(起動、停止、バックグラウンド状態の切り替わり)
 //  Swift5GoogleAdmob1
 //
 //  Created by 川端雄介 on 2020/04/17.
@@ -7,14 +7,18 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
-
+    // 初期化処理
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        GADMobileAds.sharedInstance().start(completionHandler: nil)
+        
         return true
     }
 

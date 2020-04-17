@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		11527A7E24497F94008EA4AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11527A7C24497F94008EA4AA /* Main.storyboard */; };
 		11527A8024497F99008EA4AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11527A7F24497F99008EA4AA /* Assets.xcassets */; };
 		11527A8324497F99008EA4AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11527A8124497F99008EA4AA /* LaunchScreen.storyboard */; };
+		11527A8B244983F2008EA4AA /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11527A8A244983F2008EA4AA /* TableViewController.swift */; };
 		1659405E3E39196E45EF4E38 /* Pods_Swift5GoogleAdmob1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C701BBB9D9528B339EC26359 /* Pods_Swift5GoogleAdmob1.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		11527A7F24497F99008EA4AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11527A8224497F99008EA4AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		11527A8424497F99008EA4AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11527A8A244983F2008EA4AA /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		C701BBB9D9528B339EC26359 /* Pods_Swift5GoogleAdmob1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift5GoogleAdmob1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5A067A9800CF23609F3F73F /* Pods-Swift5GoogleAdmob1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift5GoogleAdmob1.debug.xcconfig"; path = "Target Support Files/Pods-Swift5GoogleAdmob1/Pods-Swift5GoogleAdmob1.debug.xcconfig"; sourceTree = "<group>"; };
 		FC5126584060FDAF80C41F36 /* Pods-Swift5GoogleAdmob1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift5GoogleAdmob1.release.xcconfig"; path = "Target Support Files/Pods-Swift5GoogleAdmob1/Pods-Swift5GoogleAdmob1.release.xcconfig"; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				11527A7824497F94008EA4AA /* SceneDelegate.swift */,
 				11527A7A24497F94008EA4AA /* ViewController.swift */,
 				11527A7C24497F94008EA4AA /* Main.storyboard */,
+				11527A8A244983F2008EA4AA /* TableViewController.swift */,
 				11527A7F24497F99008EA4AA /* Assets.xcassets */,
 				11527A8124497F99008EA4AA /* LaunchScreen.storyboard */,
 				11527A8424497F99008EA4AA /* Info.plist */,
@@ -88,7 +91,6 @@
 				E5A067A9800CF23609F3F73F /* Pods-Swift5GoogleAdmob1.debug.xcconfig */,
 				FC5126584060FDAF80C41F36 /* Pods-Swift5GoogleAdmob1.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -210,6 +212,7 @@
 				11527A7B24497F94008EA4AA /* ViewController.swift in Sources */,
 				11527A7724497F94008EA4AA /* AppDelegate.swift in Sources */,
 				11527A7924497F94008EA4AA /* SceneDelegate.swift in Sources */,
+				11527A8B244983F2008EA4AA /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,12 +7,21 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
 class ViewController: UIViewController {
 
+
+    @IBOutlet var bannerView: GADBannerView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        bannerView.adUnitID = ""
+        bannerView.rootViewController = self
+        // 広告を呼び出す
+        bannerView.load(GADRequest())
+        
     }
 
 
