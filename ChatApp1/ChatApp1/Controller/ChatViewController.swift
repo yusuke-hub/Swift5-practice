@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,UITextFieldDelegate {
 
     @IBOutlet var tableView: UITableView!
     @IBOutlet var messageTextField: UITextField!
@@ -16,11 +16,15 @@ class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     // スクリーンサイズ
     let screenSize = UIScreen.main.bounds.size
     
+    var chatArray = [Message]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.delegate = self
         tableView.dataSource = self
+        messageTextField.delegate = self
+        
         tableView.register(UINib(nibName: "CustomCell", bundle: nil), forCellReuseIdentifier: "Cell")
         // セルの高さを可変にする
         tableView.rowHeight = UITableView.automaticDimension
@@ -42,15 +46,51 @@ class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     // 引数としてNSNotification型を取れるという意味
     @objc func keyboardWillShow(_ notification:NSNotification){
         
+        // CG(CoreGraphics)
         let keyboardHeight = ((notification.userInfo![UIResponder.keyboardFrameEndUserInfoKey] as Any) as AnyObject).cgRectValue.height
+        
+        // 画面全体の高さからキーボードと入力分の高さを引く
+        messageTextField.frame.origin.y = screenSize.height - keyboardHeight - messageTextField.frame.height
         
         
     }
     
+    @objc func keyboardWillHide(_ notification:NSNotification){
+        
+        messageTextField.frame.origin.y = screenSize.height - messageTextField.frame.height
+        
+        guard let rect = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue,
+            let duration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? TimeInterval else {return}
+        
+        UIView.animate(withDuration: duration){
+            
+            let transform = CGAffineTransform(translationX: 0, y: 0)
+            self.view.transform = transform
+        }
+    }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        messageTextField.resignFirstResponder()
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        messageTextField.resignFirstResponder()
+        return true
+        
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        
+        // メッセージの数
+        return
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        
+        return 1
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
