@@ -133,6 +133,9 @@
                                 <rect key="frame" x="363" y="866" width="31" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="送信"/>
+                                <connections>
+                                    <action selector="sendAction:" destination="eqa-rv-t61" eventType="touchUpInside" id="xOf-D1-0y1"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -141,6 +144,7 @@
                     <navigationItem key="navigationItem" id="viE-Ef-DBe"/>
                     <connections>
                         <outlet property="messageTextField" destination="rLW-3H-UTO" id="Jna-dI-U8v"/>
+                        <outlet property="sendButton" destination="8Tk-jU-5MS" id="eew-fs-J7I"/>
                         <outlet property="tableView" destination="sfK-hW-9c4" id="n6g-aA-axV"/>
                     </connections>
                 </viewController>
