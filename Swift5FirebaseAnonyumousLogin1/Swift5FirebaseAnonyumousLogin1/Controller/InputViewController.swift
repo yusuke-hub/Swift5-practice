@@ -10,21 +10,38 @@ import UIKit
 
 class InputViewController: UIViewController {
 
+    @IBOutlet var logoImageView: UIImageView!
+    @IBOutlet var userNameTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        logoImageView.layer.cornerRadius = 30.0
 
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewWillAppear(_ animated: Bool) {
+        // デフォルトでtrue
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: true)
     }
-    */
+
+
+    @IBAction func done(_ sender: Any) {
+        // ユーザー名をアプリ内に保存
+        UserDefaults.standard.set(userNameTextField.text, forKey: "userName")
+        // アイコンをアプリ内に保存
+        // 画像を10分の1に圧縮する
+        let data = logoImageView.image?.jpegData(compressionQuality: 0.1)
+        UserDefaults.standard.set(data, forKey: "userImage")
+        
+        // 画面遷移
+        let nextVC = self.storyboard?.instantiateViewController(identifier: "nextVC") as! NextViewController 
+        self.navigationController?.pushViewController(nextVC, animated: true)
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+    }
+
 
 }

@@ -51,14 +51,56 @@
                     <view key="view" contentMode="scaleToFill" id="Gq1-io-bQg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="noimage" translatesAutoresizingMaskIntoConstraints="NO" id="3UL-jn-vfK">
+                                <rect key="frame" x="87" y="150" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ユーザー名" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xcR-nj-V9C">
+                                <rect key="frame" x="87" y="320" width="240" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fnU-Sm-g07">
+                                <rect key="frame" x="87" y="386" width="240" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="決定">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="done:" destination="zSh-vI-DaU" eventType="touchUpInside" id="1b1-Z8-u9Z"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.57254901960000004" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="tAp-8v-U6Q"/>
                     </view>
                     <navigationItem key="navigationItem" id="LBz-R7-Sfx"/>
+                    <connections>
+                        <outlet property="logoImageView" destination="3UL-jn-vfK" id="m8W-wC-btu"/>
+                        <outlet property="userNameTextField" destination="xcR-nj-V9C" id="jHB-gn-K1o"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8gL-Zy-hzu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1643" y="138"/>
+            <point key="canvasLocation" x="1642.0289855072465" y="137.94642857142856"/>
+        </scene>
+        <!--Next View Controller-->
+        <scene sceneID="I3F-aO-SR3">
+            <objects>
+                <viewController storyboardIdentifier="nextVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="QbC-9o-IW7" customClass="NextViewController" customModule="Swift5FirebaseAnonyumousLogin1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="w95-Ia-fan">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="7L2-sQ-b8Q"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xmc-GY-wro" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2533" y="137"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Gk9-Uv-mpN">
@@ -81,5 +123,6 @@
     </scenes>
     <resources>
         <image name="logo" width="128" height="128"/>
+        <image name="noimage" width="600" height="600"/>
     </resources>
 </document>

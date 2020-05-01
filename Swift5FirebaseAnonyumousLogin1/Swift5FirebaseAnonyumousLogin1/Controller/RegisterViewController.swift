@@ -13,7 +13,7 @@ class RegisterViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
 
     }
     
@@ -22,6 +22,12 @@ class RegisterViewController: UIViewController {
         Auth.auth().signInAnonymously { (authResule, error) in
             let user = authResule?.user
             print(user)
+            
+            // 画面遷移
+            // RegisterViewControllerクラスで、InputViewControllerの画面はinputVCというIDで管理されており、それをinputVCという変数に置き換えている
+            let inputVC = self.storyboard?.instantiateViewController(identifier: "inputVC") as! InputViewController
+            
+            self.navigationController?.pushViewController(inputVC, animated: true)
         }
     }
     
