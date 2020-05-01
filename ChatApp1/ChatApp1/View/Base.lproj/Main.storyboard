@@ -129,10 +129,10 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Tk-jU-5MS">
-                                <rect key="frame" x="363" y="866" width="31" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Tk-jU-5MS">
+                                <rect key="frame" x="358" y="851" width="56" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="送信"/>
+                                <state key="normal" image="send"/>
                                 <connections>
                                     <action selector="sendAction:" destination="eqa-rv-t61" eventType="touchUpInside" id="xOf-D1-0y1"/>
                                 </connections>
@@ -251,5 +251,6 @@
         <image name="chatLoginBG" width="1280" height="1920"/>
         <image name="loginBG" width="1475" height="1920"/>
         <image name="register" width="1281" height="1920"/>
+        <image name="send" width="128" height="128"/>
     </resources>
 </document>

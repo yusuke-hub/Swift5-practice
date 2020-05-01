@@ -1,0 +1,23 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'Swift5FirebaseAnonyumousLogin1' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Swift5FirebaseAnonyumousLogin1
+pod 'Firebase'
+pod 'Firebase/Database'
+# グルグルを回す
+pod 'SVProgressHUD'
+# メッセージを送る
+pod 'Firebase/Messaging'
+# キャッシュを取る
+pod 'SDWebImage'
+pod 'Firebase/Core'
+# ストレージサーバーを使う
+pod 'Firebase/Storage'
+# ログインをする
+pod 'Firebase/Auth'
+
+end

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1127D3EF245A5B5500E3B272 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1127D3EE245A5B5500E3B272 /* GoogleService-Info.plist */; };
+		1127D3F1245A5C7C00E3B272 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 1127D3F0245A5C7C00E3B272 /* loading.json */; };
 		115FB099244A8F5B00A2EB6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115FB098244A8F5B00A2EB6E /* AppDelegate.swift */; };
 		115FB09B244A8F5B00A2EB6E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115FB09A244A8F5B00A2EB6E /* SceneDelegate.swift */; };
 		115FB09D244A8F5B00A2EB6E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115FB09C244A8F5B00A2EB6E /* ViewController.swift */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1127D3EE245A5B5500E3B272 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1127D3F0245A5C7C00E3B272 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
 		115FB095244A8F5B00A2EB6E /* ChatApp1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatApp1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		115FB098244A8F5B00A2EB6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		115FB09A244A8F5B00A2EB6E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,7 +83,9 @@
 				115FB0AE244A990000A2EB6E /* View */,
 				115FB0AD244A98EF00A2EB6E /* Controller */,
 				115FB0A3244A8F6000A2EB6E /* LaunchScreen.storyboard */,
+				1127D3F0245A5C7C00E3B272 /* loading.json */,
 				115FB0A6244A8F6000A2EB6E /* Info.plist */,
+				1127D3EE245A5B5500E3B272 /* GoogleService-Info.plist */,
 			);
 			path = ChatApp1;
 			sourceTree = "<group>";
@@ -195,6 +201,8 @@
 			files = (
 				115FB0A5244A8F6000A2EB6E /* LaunchScreen.storyboard in Resources */,
 				115FB0A2244A8F6000A2EB6E /* Assets.xcassets in Resources */,
+				1127D3F1245A5C7C00E3B272 /* loading.json in Resources */,
+				1127D3EF245A5B5500E3B272 /* GoogleService-Info.plist in Resources */,
 				115FB0B9244AA5C000A2EB6E /* CustomCellTableViewCell.xib in Resources */,
 				115FB0A0244A8F5B00A2EB6E /* Main.storyboard in Resources */,
 			);

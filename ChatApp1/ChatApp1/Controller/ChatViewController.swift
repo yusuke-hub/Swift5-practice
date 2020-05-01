@@ -103,6 +103,8 @@ class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CustomCellTableViewCell
         
         cell.messageLabel.text = chatArray[indexPath.row].message
+        
+
         cell.userNameLabel.text = chatArray[indexPath.row].sender
         cell.iconImageView.image = UIImage(named: "dogAvatarImage")
         
@@ -113,6 +115,8 @@ class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         }else{
             
             cell.messageLabel.backgroundColor = UIColor.flatBlue()
+            cell.messageLabel.layer.cornerRadius = 20
+            cell.messageLabel.layer.masksToBounds = true
         }
 
         
@@ -126,6 +130,13 @@ class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         messageTextField.endEditing(true)
         messageTextField.isEnabled = false
         sendButton.isEnabled = false
+        
+        if messageTextField.text.count > 15{
+            print("15文字以上です。")
+            
+            return
+            
+        }
         
         let chatDB = Database.database().reference().child("chats")
         
