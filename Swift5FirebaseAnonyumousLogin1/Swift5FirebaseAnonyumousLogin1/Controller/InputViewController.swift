@@ -8,7 +8,7 @@
 
 import UIKit
 
-class InputViewController: UIViewController {
+class InputViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
 
     @IBOutlet var logoImageView: UIImageView!
     @IBOutlet var userNameTextField: UITextField!
@@ -38,10 +38,83 @@ class InputViewController: UIViewController {
         self.navigationController?.pushViewController(nextVC, animated: true)
         
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
+    // タッチ開始時
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        userNameTextField.resignFirstResponder()
     }
-
+    
+    @IBAction func imageViewTap(_ sender: Any) {
+        
+        // iPhone6s以降に搭載された、Taptic Engineというハードウェアによる振動で、ユーザーのアクションに対するフィードバックを表現する
+        let generator = UINotificationFeedbackGenerator()
+        generator.notificationOccurred(.success)
+        
+        // アラートを出す
+        // カメラかアルバムを選択させる
+    }
+    
+    // カメラ立ち上げメソッド
+    func doCamera(){
+        
+        let sourceType:UIImagePickerController.SourceType = .camera
+        // カメラが利用可能どうかチェック
+        if UIImagePickerController.isSourceTypeAvailable(.camera){
+            let cameraPicker = UIImagePickerController()
+            cameraPicker.allowsEditing = true
+            cameraPicker.sourceType = sourceType
+            cameraPicker.delegate = self
+            self.present(cameraPicker, animated: true, completion: nil)
+        }
+    }
+    
+    func doAlbum(){
+        
+        let sourceType:UIImagePickerController.SourceType = .photoLibrary
+        // アルバムが利用可能どうかチェック
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary){
+            let cameraPicker = UIImagePickerController()
+            cameraPicker.allowsEditing = true
+            cameraPicker.sourceType = sourceType
+            cameraPicker.delegate = self
+            self.present(cameraPicker, animated: true, completion: nil)
+            
+        }
+    }
+    // ユーザーが画像、動画を選択した時の処理
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        if info[.originalImage] as? UIImage != nil{
+            let selectedImage = info[.originalImage] as! UIImage
+            UserDefaults.standard.set(selectedImage.jpegData(compressionQuality: 0.1), forKey: "userImage")
+            
+            logoImageView.image = selectedImage
+            picker.dismiss(animated: true, completion: nil)
+        }
+    }
+    // ユーザーが画像、動画の選択をキャンセルした時の処理
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil )
+    }
+    
+    // アラート
+    func showAlert(){
+        let alertController = UIAlertController(title: "選択", message: "どちらを使用しますか？", preferredStyle: .actionSheet)
+        
+        let action1 = UIAlertAction(title: "カメラ", style: .default) { (alert) in
+            self.doCamera()
+        }
+        let action2 = UIAlertAction(title: "アルバム", style: .default) { (alert) in
+            self.doAlbum()
+        }
+        let action3 = UIAlertAction(title: "キャンセル", style: .cancel)
+            
+        
+        alertController.addAction(action1)
+        alertController.addAction(action2)
+        alertController.addAction(action3)
+        self.present(alertController, animated: true, completion: nil)
+        
+    }
+    
 
 }
