@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class NextViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
@@ -24,6 +25,9 @@ class NextViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     var createDate = String()
     var contentImageString = String()
     var userProfileImageString = String()
+    
+    // Contentsクラスの配列を代入する
+    var contentsArray = [Contents]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,12 +47,39 @@ class NextViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         
 
     }
+    // UITableViewに表示したいセルの数を教える
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        
+        return contentsArray.count
     }
-    
+    // セルを生成して返却するメソッドで、セルの数だけ呼びだされる
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        
+        let cell = timeLineTabelView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        
+        // コンテンツ
+        
+        // 配列は0からだが、Tagは1から始める
+        // profileImageView
+        let profileImageView = cell.viewWithTag(1) as! UIImageView
+        
+        profileImageView.sd_setImage(with: URL(string: contentsArray[indexPath.row].profileImageString), completed: nil)
+        profileImageView.layer.cornerRadius = 30.0
+        
+        // ユーザー名
+        let userNameLabel = cell.viewWithTag(2) as! UILabel
+        userNameLabel.text = contentsArray[indexPath.row].userNameString
+        
+        // 投稿日時
+        let dateLabel = cell.viewWithTag(3) as! UILabel
+        dateLabel.text = contentsArray[indexPath.row].postDateString
+        
+        // 投稿画像
+
+        
+    }
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
