@@ -7,8 +7,13 @@
 //
 
 import UIKit
+// キャッシュサポート付きで非同期による画像のDLができるライブラリ
+// ライブラリ:部品化したプログラム部品を複数集めて一つのファイルに収納したもの
 import SDWebImage
+// Firebase:Googleが提供しているモバイルおよびWebアプリケーションのバックエンドサービス。クラウドサービスではBaas(Backend as a service)という位置付け。
+import Firebase
 
+//UITableViewDataSourde:データを管理し、1つのTableViewにセルを渡すために、使用するオブジェクトによって、管理されているメソッド
 class NextViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
     
 
@@ -167,10 +172,51 @@ class NextViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         // ピッカーを閉じる
         picker.dismiss(animated: true, completion: nil)
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
+    func fetchContentsData(){
+        
+        // 最新の100件を取得して、日付順に並び替える
+        //
+        let ref = Database.database().reference().child("timeLine").queryLimited(toLast: 100).queryOrdered(byChild: "postDate").observe(.value) { (snapShot) in
+            self.contentsArray.removeAll()
+            if let snapShot = snapShot.children.allObjects as? [DataSnapshot]{
+                
+                for snap in snapShot{
+                    if let postData = snap.value as? [String:Any]{
+                        
+                        let userName = postData["userName"] as? String
+                        let userProfileImage = postData["userProfileImage"] as? String
+                        let contents = postData["contents"] as? String
+                        let comment = postData["comment"] as? String
+                        var postDate:CLong?
+                        if let postedDate = postData["postDate"] as? CLong{
+                            postDate = postedDate
+                        }
+                        
+                        // postDateを時間に変換する
+                        let timeString = self.convertTimeStamp(serverTimeStamp: postDate!)
+                        self.contentsArray.append(Contents(userNameString: userName!, profileImageString: userProfileImage!, contentImageString: contents!, commentString: comment!, postDateString: timeString))
+                    }
+                }
+                self.timeLineTabelView.reloadData()
+                
+            }
+        }
     }
-
+    //
+    func convertTimeStamp(serverTimeStamp:CLong)->String{
+        
+        let x = serverTimeStamp / 1000
+        // timeIntervalSince1970: 1970年1月1日からの経過時間で時間を算出する
+        let date = Date(timeIntervalSince1970: TimeInterval(x))
+        let formatter = DateFormatter()
+        // .long ex)2017年8月13日
+        formatter.dateStyle = .long
+        // .medium ex)16:37:46
+        formatter.timeStyle = .medium
+        
+        return formatter.string(from: date)
+        
+    }
 
 }
