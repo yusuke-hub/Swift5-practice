@@ -167,11 +167,27 @@
                     <connections>
                         <outlet property="cameraButton" destination="CC0-wb-DIG" id="DWS-sP-99d"/>
                         <outlet property="timeLineTabelView" destination="B5U-VB-euO" id="v59-Pl-pFW"/>
+                        <segue destination="7yq-bx-Dq7" kind="presentation" id="xgH-FI-YFn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xmc-GY-wro" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2530.434782608696" y="136.60714285714286"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="c89-Rv-dwL">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="7yq-bx-Dq7" customClass="DetailViewController" customModule="Swift5FirebaseAnonyumousLogin1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="D3p-fd-msS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="z21-o0-CcU"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v18-Rl-U3t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2530" y="885"/>
         </scene>
         <!--Edit And Post View Controller-->
         <scene sceneID="iJm-ti-mrg">

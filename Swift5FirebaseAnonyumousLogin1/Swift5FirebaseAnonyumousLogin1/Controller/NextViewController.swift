@@ -52,10 +52,35 @@ class NextViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         
 
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        fetchContentsData()
+    }
+    
     // UITableViewに表示したいセルの数を教える
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return contentsArray.count
+    }
+    // セルがタップされた時の処理
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        userName = contentsArray[indexPath.row].userNameString
+        commentString = contentsArray[indexPath.row].commentString
+        createDate = contentsArray[indexPath.row].postDateString
+        contentImageString = contentsArray[indexPath.row].contentImageString
+        userProfileImageString = contentsArray[indexPath.row].profileImageString
+        performSegue(withIdentifier: "detail", sender: nil)
+
+
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let detailVC = segue.destination as! DetailViewController
+        detailVC.userName = userName
+        detailVC.comment = commentString
+        detailVC.date = createDate
+        detailVC.contentImage = contentImageString
+        detailVC.profileImage = userProfileImageString
     }
     // セルを生成して返却するメソッドで、セルの数だけ呼びだされる
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -92,7 +117,7 @@ class NextViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
 
         
     }
-    
+
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 603
     }
@@ -199,7 +224,12 @@ class NextViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
                     }
                 }
                 self.timeLineTabelView.reloadData()
-                
+                // indexPathは0始まりだから、contentsArrayの数から1を引かないといけない
+                let indexPath = IndexPath(row: self.contentsArray.count - 1, section: 0)
+                if self.contentsArray.count >= 5{
+                    // 受信するデータが5つ以上になると、画面からはみ出してしまうので、timeLinetableViewを下まで自動的にスクロールして表示する
+                    self.timeLineTabelView.scrollToRow(at: indexPath, at: .bottom, animated: true)
+                }
             }
         }
     }
