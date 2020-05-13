@@ -23,11 +23,17 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XXg-rr-6qr">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="IQu-O0-R8b"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="tOP-zg-J3q"/>
+                            </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ysx-Nh-5Bs">
-                                <rect key="frame" x="327" y="88" width="67" height="38"/>
+                                <rect key="frame" x="318" y="88" width="86" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="スキップ">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
@@ -37,6 +43,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="DFj-am-4eE"/>
                     <connections>
+                        <outlet property="scrollView" destination="XXg-rr-6qr" id="H5T-Mf-2hb"/>
                         <segue destination="zjf-Nu-j42" kind="show" id="p2c-Yw-Vh9"/>
                     </connections>
                 </viewController>
@@ -58,7 +65,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V6S-H5-a1i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1863.7681159420292" y="128.57142857142856"/>
+            <point key="canvasLocation" x="1872" y="138"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mcj-fQ-yYf">
