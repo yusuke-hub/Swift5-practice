@@ -15,14 +15,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="feR-1z-G6N">
-                                <rect key="frame" x="340" y="42" width="67" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XXg-rr-6qr">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -51,10 +43,10 @@
             </objects>
             <point key="canvasLocation" x="1037.68115942029" y="137.94642857142856"/>
         </scene>
-        <!--Intro View Controller-->
+        <!--View Controller-->
         <scene sceneID="atx-PS-VK6">
             <objects>
-                <viewController id="zjf-Nu-j42" customClass="IntroViewController" customModule="Swift5IntroApp1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="zjf-Nu-j42" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rm5-IO-0t7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

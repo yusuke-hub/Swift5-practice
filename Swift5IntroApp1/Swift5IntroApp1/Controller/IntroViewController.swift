@@ -21,8 +21,22 @@ class IntroViewController: UIViewController, UIScrollViewDelegate {
         super.viewDidLoad()
         // 1,2,3と止まる。ページングができるようになる
         scrollView.isPagingEnabled = true
-        
+        setUpScroll()
 
+        for i in 0...4{
+            
+            let animationView = AnimationView()
+            let animation = Animation.named(onboardArray[i])
+            // 間違い↓
+            // x: view.frame.size.width
+            // アニメーションが全て2番目のscrollViewに表示されていた
+            animationView.frame = CGRect(x: CGFloat(i) * view.frame.size.width, y: 0, width: view.frame.size.width, height: view.frame.size.height)
+            animationView.animation = animation
+            animationView.contentMode = .scaleAspectFit
+            animationView.loopMode = .loop
+            animationView.play()
+            scrollView.addSubview(animationView)
+        }
     }
     
     func setUpScroll(){
