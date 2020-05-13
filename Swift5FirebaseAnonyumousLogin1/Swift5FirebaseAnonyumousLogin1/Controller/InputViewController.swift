@@ -21,6 +21,7 @@ class InputViewController: UIViewController,UIImagePickerControllerDelegate,UINa
     override func viewWillAppear(_ animated: Bool) {
         // デフォルトでtrue
         super.viewWillAppear(animated)
+        // ナビゲーションバーを消す
         navigationController?.setNavigationBarHidden(true, animated: true)
     }
 
@@ -42,10 +43,12 @@ class InputViewController: UIViewController,UIImagePickerControllerDelegate,UINa
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         userNameTextField.resignFirstResponder()
     }
-    
+
+    // まずはTap Gesture RecognizerをimageViewに付ける
     @IBAction func imageViewTap(_ sender: Any) {
         
         // iPhone6s以降に搭載された、Taptic Engineというハードウェアによる振動で、ユーザーのアクションに対するフィードバックを表現する
+
         let generator = UINotificationFeedbackGenerator()
         generator.notificationOccurred(.success)
         

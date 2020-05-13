@@ -20,6 +20,7 @@ class RegisterViewController: UIViewController {
     @IBAction func login(_ sender: Any) {
         // annonymous:匿名の
         Auth.auth().signInAnonymously { (authResule, error) in
+            // authResultの中に入ってくるレスポンスのuserを入れる
             let user = authResule?.user
             print(user)
             

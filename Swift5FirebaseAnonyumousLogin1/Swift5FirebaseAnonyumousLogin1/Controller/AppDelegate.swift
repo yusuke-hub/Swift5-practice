@@ -1,5 +1,6 @@
 //
 //  AppDelegate.swift
+// アプリ全体のライフタイムイベントを管理する為のクラス
 //  Swift5FirebaseAnonyumousLogin1
 //
 //  Created by 川端雄介 on 2020/05/01.
@@ -7,6 +8,7 @@
 //
 
 import UIKit
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,6 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        // アプリを起動したら、Firebaseの設定を実行する
+        FirebaseApp.configure()
         // Override point for customization after application launch.
         return true
     }

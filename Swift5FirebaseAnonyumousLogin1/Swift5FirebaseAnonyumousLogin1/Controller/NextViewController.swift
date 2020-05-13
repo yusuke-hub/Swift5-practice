@@ -21,7 +21,7 @@ class NextViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     
     @IBOutlet var cameraButton: UIButton!
     
-    var selectedImage = UIImage()
+    var selecdddddddddddtedImage = UIImage()
     
     var userName = String()
     var userImageData = Data()
